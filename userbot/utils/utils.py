@@ -22,19 +22,9 @@ from userbot import (
     BOT_TOKEN,
     BOTLOG_CHATID,
     CMD_HELP,
-    HEROKU_API_KEY,
-    HEROKU_APP_NAME,
     LOGS,
     bot,
 )
-
-heroku_api = "https://api.heroku.com"
-if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
-    Heroku = heroku3.from_key(HEROKU_API_KEY)
-    app = Heroku.app(HEROKU_APP_NAME)
-    heroku_var = app.config()
-else:
-    app = None
 
 
 async def autobot():
